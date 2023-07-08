@@ -7,24 +7,23 @@
 <html>
 	<head>
 		
-		<script>
-			function handleFormSubmit(event) {
+			<script>
+			  function handleFormSubmit(event) {
 				// Prevent the form from being submitted normally
 				event.preventDefault();
-		
+		  
 				// Get the user's input
-				var userName = document.getElementById('username').value;
-				var passWord = document.getElementById('password').value;
-		
-				// Check if the username and password are correct
-				if (userName.toLowerCase() === 'tianen' && passWord.toLowerCase() === 'tianenacc2012') {
-					// If it is, redirect to another page
-					window.location.href = "index_full.html";
+				var userInput = document.getElementById('query').value;
+		  
+				// Check if the user input is 'hello'
+				if (userInput.toLowerCase() === 'hello') {
+				  // If it is, redirect to another page
+				  window.location.href = "another_page.html";
 				} else {
-					alert('Wrong username or password!');
+				  alert('wrong passcode!');
 				}
-			}
-		</script>
+			  }
+			</script>
 		  
 		<title>TianEn Academy</title>
 		<meta charset="utf-8" />
@@ -164,13 +163,12 @@
 						<div class="inner">
 
 							<!-- Search -->
-							<section id="login" class="alt">
+							<section id="search" class="alt">
 								<form onsubmit="handleFormSubmit(event)">
-									<input type="text" name="username" id="username" placeholder="Username" />
-									<input type="password" name="password" id="password" placeholder="Password" />
-									<input type="submit" value="Login">
+								  <input type="text" name="query" id="query" placeholder="Search" />
+								  <!-- <input type="submit" value="Submit"> -->
 								</form>
-							</section>
+							  </section>
 
 							<!-- Menu -->
 								<nav id="menu">
@@ -179,7 +177,7 @@
 									</header>
 									<ul>
 										<li><a href="index.html">Homepage</a></li>
-										<!-- <li>
+										<li>
 											<span class="opener">TianEn Academy</span>
 											<ul>
 												<li><a href="chinese.html">Chinese</a></li>
@@ -198,7 +196,7 @@
 												<li><a href="math_0580_content.html">content</a></li>
 												<li><a href="#">exam</a></li>
 											</ul>
-										</li> -->
+										</li>
 										
 										<!-- <li><a href="#">Etiam Dolore</a>
 										<li><a href="#">Adipiscing</a></li>
